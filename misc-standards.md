@@ -133,3 +133,45 @@ if (Int32.TryParse(Fields[“PortNumber”], out int portNumber)) { ... }
 ## Retry Policy
 
 Any operations, especially those that retrieve/save data, should be wrapped in a mechanism to retry the operation if it fails (e.g. in the event of a database deadlock). The minimum number of tries should be 3 unless otherwise specified. Each retry should be accompanied by a small delay (250ms by default) between retries to ensure any conditions preventing the operation have cleared.
+
+## Comments
+
+Comments should be added to code where appropriate, but not excessively. By following other coding standards, code should be mostly readable, so comments should not need to be overly detailed. When considering or adding comments, adhere to the following guidelines:
+
+- DO NOT comment out code. Code that is not being used should be deleted. If old code is needed later, refer to the code file’s history. This is the entire purpose of source control.
+- Priority should always be writing easily readable and understandable code rather than comments explaining it.
+- Do not add comments to code that is already easily readable and understandable.
+- Any necessarily complex/unusual logic should always have comments explaining the logic and why it was used.
+- Comments should always have correct spelling and be grammatically correct.
+- All classes, constructors, and `public` members should have XML documentation comments.
+- Comments should always use the `//` or `///` syntax, even for multiple lines. Avoid using `/* */` as this can make reading/maintaining comments more difficult.
+
+More information about XML documentation comments can be found in [Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/documentation-comments).
+
+## Regions
+
+Regions should be used sparingly, but when necessary, code should be separated into logical regions using the `#region` and `#endregion` directives.
+
+_Example:_
+
+```csharp
+#region Constructors
+
+public Animal() { }
+public Animal(string name) { }
+
+#endregion
+```
+
+## Class Files
+
+A class files should be named the same as the class name followed by the language extension (e.g. `.cs`). If a class is renamed, the file must also be renamed. In most cases, a whole class will be in a single file. However, there may be instances where splitting a class into multiple files is necessary, using the `partial` keyword. In these cases, supplemental class files should be named with the class name and a logical grouping name, separated by a period. A single file should NEVER contain more than one class.
+
+_Examples:_
+
+```
+CoreAPI.cs
+CoreAPI.Events.cs
+CoreAPI.Products.cs
+CoreAPI.Users.cs
+```
