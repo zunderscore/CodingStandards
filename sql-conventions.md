@@ -4,7 +4,7 @@
 
 ### Naming Conventions
 
-Tables will be named using **PascalCase** in a plural form of the object they store. Columns will also be in **PascalCase, named using a short but descriptive name.
+Tables will be named using **PascalCase** in a plural form of the object they store. Columns will also be in **PascalCase**, named using a short but descriptive name.
 
 _Example:_
 
