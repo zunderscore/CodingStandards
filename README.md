@@ -7,3 +7,4 @@ My own personal coding standards docs. Feel free to clone or make a pull request
   - [Naming Conventions](csharp-naming-conventions.md)
   - [Language/Framework Conventions](csharp-language-conventions.md)
 - [SQL](sql-conventions.md)
+- [Misc Standards/Conventions](misc-standards.md)
