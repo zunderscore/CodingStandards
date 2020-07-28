@@ -9,7 +9,7 @@ When instantiating variables for any built-in types, always use the C# language 
 _Example:_
 
 ```csharp
-var message = new string(“Default message”);
+var message = new string("Default message");
 ```
 
 However, when accessing a static member of a built-in type, always use the framework form of the class name, NOT the language form.
@@ -17,7 +17,7 @@ However, when accessing a static member of a built-in type, always use the frame
 _Example:_
 
 ```csharp
-message = String.Join(“,”, listOfItems);
+message = String.Join(",", listOfItems);
 ```
 
 ## Constructor Overloading
@@ -69,14 +69,14 @@ _Examples:_
 ```csharp
 var myDog = new Dog()
 {
-    Name = “Rusty”,
-    Breed = “Dachshund”
+    Name = "Rusty",
+    Breed = "Dachshund"
 };
 var subjects = new List<string>()
 {
-    “Reading”,
-    “Writing”,
-    “Math”
+    "Reading",
+    "Writing",
+    "Math"
 };
 ```
 
@@ -126,7 +126,7 @@ When given the option to use an extension method or a static method for a type, 
 _Examples:_
 
 ```csharp
-return emailAddress.Contains(“@”);
+return emailAddress.Contains("@");
 var theAnswer = listOfNumbers.Find(42);
 ```
 
@@ -137,7 +137,7 @@ When comparing strings, unless otherwise necessary, always use a form of the `St
 Example:
 
 ```csharp
-string submittedEmail = FormValues[“Email”];
+string submittedEmail = FormValues["Email"];
 return submittedEmail.Equals(userEmail, StringComparison.InvariantCultureIgnoreCase);
 ```
 
@@ -149,7 +149,7 @@ _Examples:_
 
 ```csharp
 var serverPort = isDefaultPortSelected ? 80 : customPortNumber;
-return isConnectionAvailable ? “Success” : “Failure”;
+return isConnectionAvailable ? "Success" : "Failure";
 ```
 
 ## Attributes
